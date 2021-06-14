@@ -15,7 +15,7 @@ const SegmentTab = ({isOnSearch, changeView}: Props) => {
     <Row style={styles.container}>
         <Pressable style={{...styles.searchButtonStyle, backgroundColor: isOnSearch ? Colors.primary : Colors.primaryLight }} onPress={()=> changeView()}>
             <AppText style={styles.text}>
-                Search Dictonary
+                Search Dictionary
             </AppText>
         </Pressable>
         <Pressable style={{...styles.favouriteButtonStyle, backgroundColor: isOnSearch ? Colors.primaryLight : Colors.primary}} onPress={()=> changeView()}>

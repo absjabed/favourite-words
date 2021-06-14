@@ -4,7 +4,6 @@ import Icon from 'react-native-vector-icons/FontAwesome5'
 import Colors from '../constants/Colors/Colors';
 import Row from '../screens/Layout/Row';
 import AppButton from './Button';
-import AppText from './Text';
 import AppTextInput from './TextInput';
 
 

@@ -4,7 +4,7 @@ const Header = () => {
   return (
     <View style={styles.main}>
       <View style={styles.container}>
-            <Text style={styles.text}>Dictonary Word Finder</Text>
+            <Text style={styles.text}>Dictionary Word Finder</Text>
       </View>
     </View>
   );
