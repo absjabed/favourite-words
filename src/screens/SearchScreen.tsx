@@ -7,7 +7,8 @@ import { get } from '../api/apiRequests';
 import Toast, { ToastPosition } from 'react-native-toast-message';
 import Colors from '../constants/Colors/Colors';
 import WordComponent from '../components/WordComponent';
-import { storeItem, storeWordItem } from '../utils/asyncStorageUtils';
+import { storeWordItem } from '../utils/asyncStorageUtils';
+import { getUniqueHash } from '../utils/stringHashUtil';
 
 type State = {
   loading: boolean,
@@ -35,8 +36,6 @@ export default class SearchScreen extends React.Component {
        pronunciation: 'oul' },
        searchResultWord: 'owl',
 
-      //{"definitions":[{"type":"verb","definition":"move or appear to move swiftly and directly.","example":"lights <b>arrowed down</b> into the airport","image_url":null,"emoji":null},{"type":"noun","definition":"a weapon consisting of a thin, straight stick with a sharp point, designed to be shot from a bow.","example":"I've never used a bow and arrow","image_url":null,"emoji":null}],"word":"arrow","pronunciation":"ˈerō"}
-      
       // Arrow, Dachshund, Mirror, Badger, Spaniel, Japan, Quick, Flummoxed, Snickerdoodle
     }
 
@@ -59,8 +58,11 @@ export default class SearchScreen extends React.Component {
   }
 
   addToFavourites=(favouriteItem: any)=>{
-      favouriteItem["word"] = this.state.searchResultWord;
-      console.log(favouriteItem);
+    
+    favouriteItem["word"] = this.state.searchResultWord;
+    favouriteItem["hash"] = getUniqueHash(favouriteItem);
+      
+      //console.log(favouriteItem);
       storeWordItem(favouriteItem.type, favouriteItem);
   }
 
