@@ -50,7 +50,7 @@ exports[`WordComponent snapshot 1`] = `
     </Text>
     <Icon
       color="#FF1358"
-      name="heart"
+      name="heart-o"
       onPress={[Function]}
       size={20}
       style={
