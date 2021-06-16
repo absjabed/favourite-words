@@ -1,0 +1,101 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SegmentTabComponent snapshot 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "alignItems": "center",
+        "flexDirection": "row",
+        "width": "100%",
+      },
+      Object {
+        "backgroundColor": "#121212",
+        "justifyContent": "center",
+        "paddingTop": 20,
+      },
+    ]
+  }
+>
+  <View
+    accessible={true}
+    collapsable={false}
+    focusable={true}
+    onBlur={[Function]}
+    onClick={[Function]}
+    onFocus={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      Object {
+        "backgroundColor": "#0d0d0d",
+        "borderBottomColor": "#acacac",
+        "borderBottomLeftRadius": 7,
+        "borderLeftColor": "#acacac",
+        "borderTopColor": "#acacac",
+        "borderTopLeftRadius": 7,
+        "borderWidth": 0.8,
+        "padding": 10,
+      }
+    }
+  >
+    <Text
+      style={
+        Object {
+          "color": "#ffffff",
+          "fontFamily": "Ubuntu-Regular",
+          "fontSize": 13,
+          "fontWeight": "600",
+          "justifyContent": "center",
+        }
+      }
+    >
+      Search Dictionary
+    </Text>
+  </View>
+  <View
+    accessible={true}
+    collapsable={false}
+    focusable={true}
+    onBlur={[Function]}
+    onClick={[Function]}
+    onFocus={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      Object {
+        "backgroundColor": "#1f1f1f",
+        "borderBottomColor": "#acacac",
+        "borderBottomRightRadius": 7,
+        "borderRightColor": "#acacac",
+        "borderTopColor": "#acacac",
+        "borderTopRightRadius": 7,
+        "borderWidth": 0.8,
+        "padding": 10,
+      }
+    }
+  >
+    <Text
+      style={
+        Object {
+          "color": "#9b9b9b",
+          "fontFamily": "Ubuntu-Regular",
+          "fontSize": 13,
+          "fontWeight": "100",
+          "justifyContent": "center",
+        }
+      }
+    >
+      View Favourites
+    </Text>
+  </View>
+</View>
+`;

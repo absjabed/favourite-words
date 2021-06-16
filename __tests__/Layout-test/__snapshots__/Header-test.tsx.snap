@@ -1,0 +1,44 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Header snapshot 1`] = `
+<View
+  style={
+    Object {
+      "backgroundColor": "#1f1f1f",
+      "borderBottomColor": "#9b9b9b",
+      "borderBottomWidth": 0.5,
+      "justifyContent": "center",
+      "padding": 10,
+      "paddingHorizontal": 25,
+      "width": "100%",
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "flexDirection": "row",
+        "height": 35,
+        "justifyContent": "center",
+        "maxHeight": 40,
+        "width": "100%",
+      }
+    }
+  >
+    <Text
+      style={
+        Object {
+          "color": "#ffffff",
+          "flexDirection": "row",
+          "fontFamily": "Ubuntu-Regular",
+          "fontSize": 16,
+          "justifyContent": "center",
+        }
+      }
+    >
+      Dictionary Word Finder
+    </Text>
+  </View>
+</View>
+`;

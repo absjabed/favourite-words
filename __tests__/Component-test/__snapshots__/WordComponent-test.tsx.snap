@@ -1,0 +1,115 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`WordComponent snapshot 1`] = `
+<View
+  style={
+    Object {
+      "backgroundColor": "#22272e",
+      "borderColor": "#acacac",
+      "borderRadius": 10,
+      "borderWidth": 0.3,
+      "elevation": 3,
+      "flex": 1,
+      "flexDirection": "row",
+      "marginBottom": 10,
+      "padding": 10,
+      "shadowColor": "#000",
+      "shadowOffset": Object {
+        "height": 1,
+        "width": 0,
+      },
+      "shadowOpacity": 0.2,
+      "shadowRadius": 1.41,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "flexDirection": "column",
+        "justifyContent": "center",
+        "width": "100%",
+      }
+    }
+  >
+    <Text
+      style={
+        Object {
+          "alignSelf": "center",
+          "backgroundColor": "#555CC4",
+          "borderRadius": 7,
+          "color": "#ffffff",
+          "fontFamily": "Ubuntu-Regular",
+          "justifyContent": "flex-start",
+          "padding": 5,
+        }
+      }
+    >
+      noun
+    </Text>
+    <Icon
+      color="#FF1358"
+      name="heart"
+      onPress={[Function]}
+      size={20}
+      style={
+        Object {
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+        }
+      }
+    />
+    <Text
+      style={
+        Object {
+          "color": "#ffffff",
+          "fontFamily": "Ubuntu-Regular",
+          "fontSize": 12,
+          "padding": 2,
+          "paddingTop": 5,
+          "textAlign": "center",
+        }
+      }
+    >
+      a nocturnal bird of prey with large eyes, a facial disc, a hooked beak, and typically a loud hooting call.
+    </Text>
+    <View>
+      <Image
+        source={
+          Object {
+            "uri": "https://media.owlbot.info/dictionary/images/owl.jpg.400x400_q85_box-403,83,960,640_crop_detail.jpg",
+          }
+        }
+        style={
+          Object {
+            "alignSelf": "center",
+            "borderColor": "white",
+            "borderRadius": 10,
+            "borderWidth": 1,
+            "height": 90,
+            "margin": 5,
+            "width": 90,
+          }
+        }
+      />
+    </View>
+    <Text
+      style={
+        Object {
+          "color": "#acacac",
+          "fontFamily": "Ubuntu-MediumItalic",
+          "fontSize": 12,
+          "padding": 2,
+          "textAlign": "center",
+        }
+      }
+    >
+      "
+      I love reaching out into that absolute silence, when you can hear the owl or the wind.
+      "
+    </Text>
+  </View>
+</View>
+`;

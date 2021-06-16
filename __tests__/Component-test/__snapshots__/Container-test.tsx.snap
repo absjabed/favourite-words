@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Container snapshot 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "padding": 20,
+        "paddingHorizontal": 30,
+      },
+      undefined,
+    ]
+  }
+/>
+`;
