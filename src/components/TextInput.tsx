@@ -7,6 +7,7 @@ const AppTextInput = (props: any) => {
     <View
       style={styles.container}>
       <TextInput
+        autoCapitalize={"none"}
         underlineColorAndroid="transparent"
         secureTextEntry={props.secureTextEntry}
         placeholder={props.placeholder}

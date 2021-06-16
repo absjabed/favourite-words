@@ -28,5 +28,6 @@ export default {
   buttonColor: "#ff3403",
   activeColor: "#0d0d0d",
   deactiveColor:"#1f1f1f",
+  cardBackground: "#22272e"
   
 };

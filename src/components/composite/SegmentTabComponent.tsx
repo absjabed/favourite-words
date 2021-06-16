@@ -31,7 +31,7 @@ export default SegmentTab;
 
 const styles = StyleSheet.create({
   container: {
-    paddingTop: 10, 
+    paddingTop: 20, 
     justifyContent:'center',
     backgroundColor: Colors.darkBackground
   },

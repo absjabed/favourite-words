@@ -11,7 +11,7 @@ const AppButton = (props: any) => {
 const styles = StyleSheet.create({
   button: {
     alignItems: 'center',
-    backgroundColor: Colors.buttonColor,
+    backgroundColor: Colors.primary,
     borderRadius: 7,
     color: Colors.white,
     padding: 10,
@@ -21,7 +21,8 @@ const styles = StyleSheet.create({
   },
   text: {
     color: Colors.white,
-    fontWeight: 'bold'
+    //fontWeight: 'bold',
+    fontFamily:'Ubuntu-Regular'
   },
 });
 export default AppButton;

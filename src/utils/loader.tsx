@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { StyleSheet, View, Modal, ActivityIndicator } from 'react-native';
+import Colors from '../constants/Colors/Colors';
 
 const ProgressDialog = (props: any) => {
   const {
@@ -17,7 +18,7 @@ const ProgressDialog = (props: any) => {
         <View style={styles.activityIndicatorWrapper}>
           <ActivityIndicator
             animating={loading}
-            color={'red'}
+            color={Colors.primaryLight}
             //size="large"
             />
         </View>
@@ -35,7 +36,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#00000040'
   },
   activityIndicatorWrapper: {
-    backgroundColor: '#FFFFFF',
+    backgroundColor: Colors.white,
     height: 100,
     width: 100,
     borderRadius: 10,

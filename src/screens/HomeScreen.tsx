@@ -41,6 +41,7 @@ export default class HomeScreen extends React.Component<Props, State> {
     return (
       <View
         style={styles.container}>
+        
         <SegmentTab isOnSearch={this.state.isOnSearch} changeView={this.changeView} />
         <View style={styles.screenContainer}>
             <Container>

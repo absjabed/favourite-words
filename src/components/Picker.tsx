@@ -2,6 +2,7 @@ import React from 'react';
 import {StyleSheet} from 'react-native';
 import RNPickerSelect, {PickerSelectProps} from 'react-native-picker-select';
 import Icon  from 'react-native-vector-icons/FontAwesome5';
+import Colors from '../constants/Colors/Colors';
 
 const Picker: React.FC<PickerSelectProps> = (props: PickerSelectProps) => (
   <RNPickerSelect 
@@ -11,7 +12,7 @@ const Picker: React.FC<PickerSelectProps> = (props: PickerSelectProps) => (
     style={pickerSelectStyles}
     
     Icon={() => {
-      return <Icon style={{left: 5, marginTop:15}} name="caret-down" />;
+      return <Icon style={{left: 5, marginTop:15, color: Colors.white}} name="caret-down" />;
     }}
   >
   </RNPickerSelect>
@@ -33,15 +34,16 @@ const pickerSelectStyles = StyleSheet.create({
   },
   inputAndroid: {
     width: '100%',
-    fontSize: 16,
+    fontSize: 14,
     marginLeft: 20,
     marginRight: 20,
     paddingHorizontal: 10,
     paddingVertical: 8,
     borderWidth: 0.5,
-    borderColor: '#000',
+    borderColor: Colors.gray,
     borderRadius: 7,
-    color: 'black',
+    color: Colors.grey,
+    fontFamily:'Ubuntu-Regular',
     paddingRight: 30, // to ensure the text is never behind the icon
   },
 });

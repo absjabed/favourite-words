@@ -147,7 +147,7 @@ const styles = StyleSheet.create({
     alignItems:'center'
   },
   searchContainer:{
-    marginTop: -25
+    marginTop: -5
   },
   headingStyle:{
     width: '100%',
@@ -170,13 +170,13 @@ const styles = StyleSheet.create({
       fontSize:24, 
       fontFamily:'Ubuntu-Bold', 
       textDecorationLine:'underline', 
-      color: Colors.primary
+      color: Colors.white
     },
     pronunciation:{
       fontSize:15, 
       paddingLeft:5, 
       fontFamily:'Ubuntu-Bold', 
-      color: Colors.darkGray
+      color: Colors.grey
     }
 
 })
