@@ -1,6 +1,6 @@
 import React from 'react';
-import { createAppContainer } from 'react-navigation';
 import Toast from 'react-native-toast-message';
+import { createAppContainer } from 'react-navigation';
 import { createStackNavigator} from 'react-navigation-stack';
 import HomeScreen from '../screens/HomeScreen';
 
@@ -19,9 +19,11 @@ const App = createStackNavigator({
 
 const AppContainer =  createAppContainer(App);
 
-const ToastContainer = () => <>
-                              <AppContainer/> 
-                              <Toast ref={(ref) => Toast.setRef(ref)} />
-                            </>
+const ToastContainer = () => {
+  return <>
+    <AppContainer />
+    {process.env.JEST_WORKER_ID  ?? (<Toast ref={(ref) => Toast.setRef(ref)} />)}
+  </>;
+}
 
 export default ToastContainer;
