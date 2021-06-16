@@ -1,9 +1,10 @@
 import React from 'react';
-import { View, FlatList } from 'react-native';
+import { View, FlatList, Text } from 'react-native';
 import Toast, { ToastPosition } from 'react-native-toast-message';
 import FavouriteWordComponent from '../components/FavouriteWordComponent';
 import Picker from '../components/Picker'
 import AppText from '../components/Text';
+import Colors from '../constants/Colors/Colors';
 import { getAllStorageKeys, removeFavouriteWordItem, retrieveWords } from '../utils/asyncStorageUtils';
 
 type State = {
@@ -104,6 +105,9 @@ export default class FavoutriteScreen extends React.Component {
           <FlatList
             data={this.state.favItems}
             renderItem={({ item, index }) => <FavouriteWordComponent addToFavourites={this.removeFromFavourites} wordItem={item} index={index} key={index} />}
+            ListEmptyComponent={<View style={{flexDirection:'row', paddingTop:'50%', justifyContent:'center', alignItems:'center'}}> 
+            <Text style={{fontSize: 18,  fontFamily:'Ubuntu-Bold', color: Colors.gray}} >No Info Available</Text>
+        </View>}
             keyExtractor={(item, index) => `${index}`}
             contentContainerStyle={{padding: 10}}
             />

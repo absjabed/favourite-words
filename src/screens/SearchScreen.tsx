@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, FlatList, StyleSheet } from 'react-native';
+import { View, FlatList, StyleSheet, Text } from 'react-native';
 import AppText from '../components/Text';
 import ProgressDialog from '../utils/loader'
 import SearchComponent from '../components/SearchComponent';
@@ -121,6 +121,10 @@ export default class SearchScreen extends React.Component {
                 data={this.state.searchResult.definitions}
                 renderItem={({ item, index }) => <WordComponent addToFavourites={this.addToFavourites} wordItem={item} index={index} key={index} />}
                 keyExtractor={(item, index) => `${index}`}
+                ListEmptyComponent={
+                                            <View style={{flexDirection:'row', paddingTop:'50%', justifyContent:'center', alignItems:'center'}}> 
+                                                <Text style={{fontSize: 18,  fontFamily:'Ubuntu-Bold', color: Colors.gray}} >No Info Available</Text>
+                                            </View>}
                 contentContainerStyle={{padding: 10}} 
                 />
           </View>

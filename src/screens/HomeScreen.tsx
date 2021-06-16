@@ -8,7 +8,7 @@ import Container from '../components/Container';
 import SegmentTab from '../components/SegmentTabComponent';
 
 type Props = {
-  navigation: NavigationScreenProp<any,any>
+  navigation?: NavigationScreenProp<any,any>
 };
 
 type State = {

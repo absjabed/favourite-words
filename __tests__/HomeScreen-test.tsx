@@ -4,11 +4,11 @@
 
 import 'react-native';
 import React from 'react';
-import App from '../App';
+import Home from '../src/screens/HomeScreen';
 
 // Note: test renderer must be required after react-native.
 import renderer from 'react-test-renderer';
 
-it('App renders correctly', () => {
-  renderer.create(<App />);
+it('Home Screen renders correctly', () => {
+  renderer.create(<Home />);
 });
