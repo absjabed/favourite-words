@@ -15,7 +15,7 @@ const WordComponent = ({addToFavourites, index, wordItem}: Props) => {
     <View style={{ ...styles.cardShadow, ...styles.container}} key={index} >
         <View style={{flexDirection:'column', width:'100%', justifyContent:'center', alignItems:'center'}}>
             <Text style={{backgroundColor: Colors.primary, borderRadius:7, justifyContent:'flex-start',  fontFamily:'Ubuntu-Regular', padding:5, color: Colors.white, alignSelf:'center'}}>{wordItem.type}</Text>
-            <Icon onPress={()=> addToFavourites(wordItem)} style={{position:'absolute', right:0, top: 0}} name="heart" size={20} color={Colors.secondaryGradientEnd} />
+            <Icon onPress={()=> addToFavourites(wordItem)} style={{position:'absolute', right:0, top: 0}} name="heart-o" size={20} color={Colors.secondaryGradientEnd} />
             <AppText style={{fontSize:12, padding:2, textAlign:'center', fontFamily:'Ubuntu-Regular', paddingTop:5, color: Colors.white}} >{wordItem.definition}</AppText>
             {wordItem.image_url ? (<View>
                 <Image style={styles.image}  source={{uri:wordItem.image_url}} />

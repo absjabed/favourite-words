@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Text, StyleSheet } from 'react-native';
+import { View, Text, StyleSheet, Image } from 'react-native';
 import { NavigationScreenProp } from 'react-navigation';
 import Search from '../screens/SearchScreen'
 import Favourite from '../screens/FavoutriteScreen'
@@ -41,7 +41,6 @@ export default class HomeScreen extends React.Component<Props, State> {
     return (
       <View
         style={styles.container}>
-        
         <SegmentTab isOnSearch={this.state.isOnSearch} changeView={this.changeView} />
         <View style={styles.screenContainer}>
             <Container>
@@ -53,6 +52,7 @@ export default class HomeScreen extends React.Component<Props, State> {
                 }   
             </Container>
         </View>
+        <Image resizeMode="stretch" style={styles.image} source={require('../../assets/images/wave.png')} />
       </View>
     );
   }
@@ -70,5 +70,14 @@ const styles = StyleSheet.create({
     flex:1, 
     justifyContent:'center', 
     alignItems:'center'
-  }
+  },
+  image: {
+    width: "100%",
+    height: 90,
+    borderWidth: 1,
+    opacity: .4,
+    zIndex: 10,
+    margin: 5,
+    alignSelf:'center',
+  },
 });
