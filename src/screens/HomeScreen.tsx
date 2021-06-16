@@ -1,11 +1,11 @@
-/*Home Screen With buttons to navigate to diffrent options*/
 import React from 'react';
 import { View, Text, StyleSheet } from 'react-native';
 import { NavigationScreenProp } from 'react-navigation';
 import Search from '../screens/SearchScreen'
 import Favourite from '../screens/FavoutriteScreen'
 import Container from '../components/Container';
-import SegmentTab from '../components/SegmentTabComponent';
+import SegmentTab from '../components/composite/SegmentTabComponent';
+import Colors from '../constants/Colors/Colors';
 
 type Props = {
   navigation?: NavigationScreenProp<any,any>
@@ -60,7 +60,7 @@ export default class HomeScreen extends React.Component<Props, State> {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: 'white',
+    backgroundColor: Colors.darkBackground,
     justifyContent:'center',
     alignItems:'center',
     flexDirection: 'column',

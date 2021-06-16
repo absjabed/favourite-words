@@ -1,6 +1,8 @@
 import 'react-native-gesture-handler/jestSetup';
 import mockAsyncStorage from '@react-native-community/async-storage/jest/async-storage-mock';
 
+jest.mock('axios');
+jest.useFakeTimers();
 jest.mock('@react-native-community/async-storage', () => mockAsyncStorage);
 
 jest.mock('react-native-reanimated', () => {

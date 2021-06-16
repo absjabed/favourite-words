@@ -2,12 +2,12 @@ import React from 'react';
 import { View, FlatList, StyleSheet, Text } from 'react-native';
 import AppText from '../components/Text';
 import ProgressDialog from '../utils/loader'
-import SearchComponent from '../components/SearchComponent';
+import SearchComponent from '../components/composite/SearchComponent';
 import { get } from '../api/apiRequests';
 import Toast, { ToastPosition } from 'react-native-toast-message';
 import Colors from '../constants/Colors/Colors';
-import WordComponent from '../components/WordComponent';
-import { getAllStorageKeys, retrieveWords, storeWordItem } from '../utils/asyncStorageUtils';
+import WordComponent from '../components/composite/WordComponent';
+import { storeWordItem } from '../utils/asyncStorageUtils';
 import { getUniqueHash } from '../utils/stringHashUtil';
 
 type State = {
@@ -123,7 +123,7 @@ export default class SearchScreen extends React.Component {
                 keyExtractor={(item, index) => `${index}`}
                 ListEmptyComponent={
                                             <View style={{flexDirection:'row', paddingTop:'50%', justifyContent:'center', alignItems:'center'}}> 
-                                                <Text style={{fontSize: 18,  fontFamily:'Ubuntu-Bold', color: Colors.gray}} >No Info Available</Text>
+                                                <Text style={{fontSize: 18,  fontFamily:'Ubuntu-Bold', color: Colors.lightGray}} >No Info Available</Text>
                                             </View>}
                 contentContainerStyle={{padding: 10}} 
                 />
@@ -138,7 +138,7 @@ export default class SearchScreen extends React.Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: Colors.white,
+    backgroundColor: Colors.darkBackground,
     flexDirection: 'column',
   },
   subContainer:{
@@ -155,6 +155,7 @@ const styles = StyleSheet.create({
     paddingTop: 15,
    },
    headingText:{
+     color: Colors.grey,
      fontSize:16, 
      fontFamily:'Ubuntu-Bold'
     },

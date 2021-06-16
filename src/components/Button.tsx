@@ -11,7 +11,7 @@ const AppButton = (props: any) => {
 const styles = StyleSheet.create({
   button: {
     alignItems: 'center',
-    backgroundColor: Colors.secondary,
+    backgroundColor: Colors.buttonColor,
     borderRadius: 7,
     color: Colors.white,
     padding: 10,

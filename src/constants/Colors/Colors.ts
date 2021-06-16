@@ -19,5 +19,14 @@ export default {
   black: '#000000',
   green: '#6DD0A3',
   yellow: '#ffc247',
+
+  placeholderColor: '#9b9b9b',
+  darkTitleBackground: '#1f1f1f',
+  darkBackground: '#121212',
+  darkSurface: '#1d1d1d',
+  darkCard: '#1d1d1d',
+  buttonColor: "#ff3403",
+  activeColor: "#0d0d0d",
+  deactiveColor:"#1f1f1f",
   
 };

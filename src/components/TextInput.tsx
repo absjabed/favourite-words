@@ -1,27 +1,19 @@
 /*Custom TextInput*/
 import React from 'react';
-import { View, TextInput } from 'react-native';
+import { View, TextInput, StyleSheet } from 'react-native';
 import Colors from '../constants/Colors/Colors';
 const AppTextInput = (props: any) => {
   return (
     <View
-      style={{
-        marginLeft: 20,
-        marginRight: 20,
-        marginTop: 10,
-        borderColor: Colors.gray,
-        borderRadius: 7,
-        borderWidth: 1,
-        height: 40
-      }}>
+      style={styles.container}>
       <TextInput
         underlineColorAndroid="transparent"
         secureTextEntry={props.secureTextEntry}
         placeholder={props.placeholder}
-        placeholderTextColor= {Colors.darkGray}
+        placeholderTextColor= {Colors.placeholderColor}
         keyboardType={props.keyboardType}
         onChangeText={props.onChangeText}
-        textAlign="center"
+        textAlign="left"
         ref={props.refInner}
         blurOnSubmit={false}
         onFocus={props.onFocus}
@@ -30,11 +22,31 @@ const AppTextInput = (props: any) => {
         numberOfLines={props.numberOfLines}
         multiline={props.multiline}
         onSubmitEditing={props.onSubmitEditing}
-        style={props.style}
+        style={styles.txtInput}
         editable={props.editable}
         value={props.value}
       />
     </View>
   );
 };
+
+
+const styles = StyleSheet.create({
+  container:{
+    marginLeft: 20,
+    marginRight: 20,
+    marginTop: 10,
+    borderColor: Colors.gray,
+    borderRadius: 7,
+    borderWidth: 1,
+    height: 40
+  },
+  txtInput: {
+    opacity: 100, 
+    textAlign:'auto',
+    color: Colors.white, 
+    fontFamily:'Ubuntu-Regular', 
+    paddingHorizontal: 15
+  }
+})
 export default AppTextInput;
