@@ -7,7 +7,7 @@ import { get } from '../api/apiRequests';
 import Toast, { ToastPosition } from 'react-native-toast-message';
 import Colors from '../constants/Colors/Colors';
 import WordComponent from '../components/WordComponent';
-import { storeWordItem } from '../utils/asyncStorageUtils';
+import { getAllStorageKeys, retrieveWords, storeWordItem } from '../utils/asyncStorageUtils';
 import { getUniqueHash } from '../utils/stringHashUtil';
 
 type State = {
@@ -22,19 +22,8 @@ export default class SearchScreen extends React.Component {
     state: State = {
       loading: false,
       searchedWord: '',
-      searchResult: 
-      { definitions:
-        [ { type: 'noun',
-            definition:
-             'a nocturnal bird of prey with large eyes, a facial disc, a hooked beak, and typically a loud hooting call.',
-            example:
-             'I love reaching out into that absolute silence, when you can hear the owl or the wind.',
-            image_url:
-             'https://media.owlbot.info/dictionary/images/owl.jpg.400x400_q85_box-403,83,960,640_crop_detail.jpg',
-            emoji: '🦉' } ],
-       word: 'owl',
-       pronunciation: 'oul' },
-       searchResultWord: 'owl',
+      searchResult: [],
+      searchResultWord: '',
 
       // Arrow, Dachshund, Mirror, Badger, Spaniel, Japan, Quick, Flummoxed, Snickerdoodle
     }
@@ -57,13 +46,16 @@ export default class SearchScreen extends React.Component {
       })
   }
 
-  addToFavourites=(favouriteItem: any)=>{
-    
+  addToFavourites= async (favouriteItem: any)=>{
+   try{ 
     favouriteItem["word"] = this.state.searchResultWord;
     favouriteItem["hash"] = getUniqueHash(favouriteItem);
-      
-      //console.log(favouriteItem);
-      storeWordItem(favouriteItem.type, favouriteItem);
+    
+    await storeWordItem(favouriteItem.type, favouriteItem);
+    this.showToastMessage('success', "bottom", "Added!", "Added to favourites ❤️", 1000);
+  } catch (error: any) {
+    this.showToastMessage('error', "bottom", "Error!", "Something went wrong!", 1000);
+  }
   }
 
   initiateSearch = () =>{  
@@ -85,13 +77,15 @@ export default class SearchScreen extends React.Component {
                 });
 
               }else{
-                this.showToastMessage('error', "bottom", "Error!", "Something wrong happend!", 1000);
+                this.setState({searchResult: [], searchResultWord: ""},()=>{
+                  this.showToastMessage('error', "bottom", "Error!", "Something wrong happend!", 1000);
+                });
               }
               });
 
           })
           .catch(errorMessage => {   
-              this.setState({loading: false}, ()=>{
+              this.setState({loading: false, searchResult: [], searchResultWord: ""}, ()=>{
                 if(errorMessage.search('404') > 0){
                   this.showToastMessage('info', "bottom", "Not Found!", "No definition found! :(", 1000);
                 }else{
