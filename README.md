@@ -68,13 +68,12 @@
 
 ---
 
-## App Screenshots
-|--|--|--|
-|:---:|:---:|:---:|
-| <img src="./screenshot/Splash.png" width="550" height="500" /> | <img src="./screenshot/1.arrow.png" width="550" height="500" /> | <img src="./screenshot/2.Dutch.png" width="550" height="500"/> |
-| <img src="./screenshot/3.mirror.png" width="550" height="500" /> | <img src="./screenshot/4.Badger.png" width="550" height="500" /> | <img src="./screenshot/5.Spaniel.png" width="550" height="500"/> |
-| <img src="./screenshot/6.japan.png" width="550" height="500" /> | <img src="./screenshot/7.quick.png" width="550" height="500" /> | <img src="./screenshot/8.Flummoxed.png" width="550" height="500"/> |
-| <img src="./screenshot/9.NotFound.png" width="550" height="500" /> | <img src="./screenshot/adverb.png" width="550" height="500" /> | <img src="./screenshot/noun.png" width="550" height="500"/> |
-| <img src="./screenshot/verb.png" width="550" height="500" /> |
-
----
+## App Screenshots (With usecases)
+Left             |  Right
+:-------------------------:|:-------------------------:
+<img src="./screenshot/Splash.png" />  |  <img src="./screenshot/1.arrow.png" />|
+<img src="./screenshot/2.Dutch.png" /> |  <img src="./screenshot/3.mirror.png" />  |
+<img src="./screenshot/4.Badger.png"/> | <img src="./screenshot/5.Spaniel.png" />|
+<img src="./screenshot/6.japan.png" /> | <img src="./screenshot/7.quick.png"  />|
+<img src="./screenshot/8.Flummoxed.png" /> | <img src="./screenshot/9.NotFound.png"  /> |
+<img src="./screenshot/adverb.png" /> | <img src="./screenshot/noun.png"  />|
