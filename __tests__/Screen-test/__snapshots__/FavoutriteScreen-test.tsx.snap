@@ -4,7 +4,7 @@ exports[`Favoutrite Screen snapshot 1`] = `
 <View
   style={
     Object {
-      "backgroundColor": "#121212",
+      "backgroundColor": "transparent",
       "flex": 1,
       "flexDirection": "column",
     }
@@ -376,7 +376,7 @@ exports[`Favoutrite Screen snapshot 1`] = `
   <View
     style={
       Object {
-        "marginBottom": 45,
+        "marginBottom": -60,
         "marginTop": 10,
         "width": "100%",
       }

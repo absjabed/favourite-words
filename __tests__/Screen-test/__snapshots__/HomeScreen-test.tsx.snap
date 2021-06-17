@@ -83,7 +83,7 @@ exports[`Home Screen snapshot 1`] = `
       onStartShouldSetResponder={[Function]}
       style={
         Object {
-          "backgroundColor": "#1f1f1f",
+          "backgroundColor": "#212121",
           "borderBottomColor": "#acacac",
           "borderBottomRightRadius": 7,
           "borderRightColor": "#acacac",
@@ -132,7 +132,7 @@ exports[`Home Screen snapshot 1`] = `
       <View
         style={
           Object {
-            "backgroundColor": "#121212",
+            "backgroundColor": "transparent",
             "flex": 1,
             "flexDirection": "column",
           }
@@ -377,6 +377,8 @@ exports[`Home Screen snapshot 1`] = `
             style={
               Object {
                 "flex": 1,
+                "marginBottom": -110,
+                "zIndex": 3,
               }
             }
           >
@@ -475,10 +477,9 @@ exports[`Home Screen snapshot 1`] = `
         "alignSelf": "center",
         "borderWidth": 1,
         "height": 90,
-        "margin": 5,
-        "opacity": 0.4,
+        "opacity": 0.5,
         "width": "100%",
-        "zIndex": 10,
+        "zIndex": -1,
       }
     }
   />

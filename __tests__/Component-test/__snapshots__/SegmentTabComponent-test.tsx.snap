@@ -72,7 +72,7 @@ exports[`SegmentTabComponent snapshot 1`] = `
     onStartShouldSetResponder={[Function]}
     style={
       Object {
-        "backgroundColor": "#1f1f1f",
+        "backgroundColor": "#212121",
         "borderBottomColor": "#acacac",
         "borderBottomRightRadius": 7,
         "borderRightColor": "#acacac",

@@ -31,6 +31,6 @@ jest.mock('react-native-vector-icons/FontAwesome', () => 'Icon')
 jest.mock('react-native-vector-icons/MaterialCommunityIcons', () => 'Icon')
 
 jest.mock('react-native-splash-screen', () => ({
-    show: jest.fn().mockImplementation( () => { console.log('show splash screen'); } ),
-    hide: jest.fn().mockImplementation( () => { console.log('hide splash screen'); } ),
+    show: jest.fn().mockImplementation( () => { /**'show splash screen'**/ } ),
+    hide: jest.fn().mockImplementation( () => { /**'hide splash screen'**/ } ),
   }));
