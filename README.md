@@ -40,7 +40,7 @@ If you want to run the project please proceed with the following instructions,
   4. Start Android Emulator and check if it's available with `adb devices`
   5. In separate terminal Run following command for (Metro Bundler),
      ```
-     react-native start
+     npx react-native start
      ```
   6. To run the project in the emulator,
      ```
@@ -75,7 +75,7 @@ If you have docker installed and have internet connect please follow the steps t
 
   1. Clone the project
      ```
-     https://github.com/absjabed/favourite-words.git
+     git clone https://github.com/absjabed/favourite-words.git
      cd favourite-words
      ```
   2. Run the following command to build the project,
