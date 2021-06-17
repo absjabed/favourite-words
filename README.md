@@ -31,7 +31,7 @@ If you want to run the project please proceed with the following instructions,
   2. Download the project,
      ```
      git clone https://github.com/absjabed/favourite-words.git
-     cd /favourite-words
+     cd favourite-words
      ```
   3. Install the dependencies,
      ```
@@ -50,7 +50,7 @@ If you want to run the project please proceed with the following instructions,
      ```
      # for linux
      
-     cd /android
+     cd android
      ./gradlew clean
      
      # for windows 
@@ -76,7 +76,7 @@ If you want to build the release apk please proceed with the following instructi
   1. Download the project,
      ```
      git clone https://github.com/absjabed/favourite-words.git
-     cd /favourite-words
+     cd favourite-words
      ```
   2. To install the yarn dependencies,
      ```
@@ -84,7 +84,7 @@ If you want to build the release apk please proceed with the following instructi
      ```
   3. To clean the previous gradle build,
      ```
-     cd /android
+     cd android
 
      # for linux
      ./gradlew clean
