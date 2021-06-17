@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Text, StyleSheet, Image } from 'react-native';
+import { View, Text, StyleSheet, Image, ImageBackground } from 'react-native';
 import { NavigationScreenProp } from 'react-navigation';
 import Search from '../screens/SearchScreen'
 import Favourite from '../screens/FavoutriteScreen'
@@ -30,11 +30,11 @@ export default class HomeScreen extends React.Component<Props, State> {
   }
 
   componentDidMount(){
-    console.log('Home Screen mounted')
+    //console.log('Home Screen mounted')
   }
 
   componentWillUnmount(){
-    console.log('Home Screen unmounted')
+    //console.log('Home Screen unmounted')
   }
 
   render() {
@@ -75,9 +75,10 @@ const styles = StyleSheet.create({
     width: "100%",
     height: 90,
     borderWidth: 1,
-    opacity: .4,
-    zIndex: 10,
-    margin: 5,
+    opacity: .5,
+    zIndex: -1, // works on ios
+    //elevation: 3, // works on android
+    //margin: 5,
     alignSelf:'center',
   },
 });

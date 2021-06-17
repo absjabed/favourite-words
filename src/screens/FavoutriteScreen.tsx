@@ -24,7 +24,7 @@ export default class FavoutriteScreen extends React.Component {
     }
 
   async componentDidMount(){
-    console.log('Favoutrite Screen mounted');
+    //console.log('Favoutrite Screen mounted');
     let wordTypes = await getAllStorageKeys();
     
     if(wordTypes.length > 0) {
@@ -84,7 +84,7 @@ export default class FavoutriteScreen extends React.Component {
       <View
         style={{
           flex: 1,
-          backgroundColor: Colors.darkBackground,
+          backgroundColor: 'transparent',
           flexDirection: 'column',
         }}>
         <View style={{display:'flex', justifyContent:'center', width:'100%', alignItems:'center'}}>
@@ -101,7 +101,7 @@ export default class FavoutriteScreen extends React.Component {
               <AppText style={{fontSize:15, fontFamily:'Ubuntu-Bold', color: Colors.grey}}>Saved Favoutrites</AppText>
           </View>
         </View>
-        <View style={{marginTop:10, width:'100%', marginBottom: 45}}>
+        <View style={{marginTop:10, width:'100%', marginBottom: -60}}>
           <FlatList
             data={this.state.favItems}
             renderItem={({ item, index }) => <FavouriteWordComponent removeFromFavourites={this.removeFromFavourites} wordItem={item} index={index} key={index} />}

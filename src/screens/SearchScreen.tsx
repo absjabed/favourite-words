@@ -29,11 +29,11 @@ export default class SearchScreen extends React.Component {
     }
 
   componentDidMount(){
-    console.log('Search Screen mounted')
+    //console.log('Search Screen mounted')
   }
 
   componentWillUnmount(){
-      console.log('Search Screen unmounted')
+      //console.log('Search Screen unmounted')
   }
 
   showToastMessage = (type: string, position: ToastPosition = "bottom", heading: string, message: string, time: number)=>{
@@ -48,6 +48,7 @@ export default class SearchScreen extends React.Component {
 
   addToFavourites= async (favouriteItem: any)=>{
    try{ 
+     //adding extra param to store favourite word...
     favouriteItem["word"] = this.state.searchResultWord;
     favouriteItem["hash"] = getUniqueHash(favouriteItem);
     
@@ -116,7 +117,7 @@ export default class SearchScreen extends React.Component {
               <AppText style={styles.pronunciation}>{ this.state.searchResult.pronunciation ? "( "+this.state.searchResult.pronunciation+" )" : ""}</AppText>
           </View>
         </View>
-        <View style={{flex: 1}}>
+        <View style={{flex:1, marginBottom: -110, zIndex: 3}}>
               <FlatList
                 data={this.state.searchResult.definitions}
                 renderItem={({ item, index }) => <WordComponent addToFavourites={this.addToFavourites} wordItem={item} index={index} key={index} />}
@@ -138,7 +139,8 @@ export default class SearchScreen extends React.Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: Colors.darkBackground,
+    //backgroundColor: Colors.darkBackground,
+    backgroundColor: 'transparent',
     flexDirection: 'column',
   },
   subContainer:{

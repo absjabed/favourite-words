@@ -1,6 +1,6 @@
 import axios from 'axios';
+import { __API_END_POINT, __OWL_BOT_TOKEN } from '../utils/constKVP';
 import handleError from './handleError';
-export const API_END_POINT = 'https://owlbot.info/api/v4/dictionary/';
 
 const getHeaders: any = () => {
   return {
@@ -8,7 +8,7 @@ const getHeaders: any = () => {
     headers: {
       'Accept': 'application/json',
       'Content-Type': 'application/json',
-      'Authorization': 'Token 0170e978d09059b49e37c623f46c316bfd5385f6'
+      'Authorization': __OWL_BOT_TOKEN+''
     },
   };
 };
@@ -16,7 +16,7 @@ const getHeaders: any = () => {
 // HTTP GET Request - Returns Resolved or Rejected Promise
 export const get = (path: string) => {
   return new Promise((resolve, reject) => {
-    axios.get(`${API_END_POINT}${path}`, getHeaders())
+    axios.get(`${__API_END_POINT}${path}`, getHeaders())
       .then(response => { resolve(response) })
       .catch(error => { reject(handleError(error)) });
   });

@@ -6,11 +6,6 @@ export async function storeWordItem(key: string, item: any) {
         const existingTypesWord: any =  await AsyncStorage.getItem(key);
         let wordArr = JSON.parse(existingTypesWord);
 
-        //console.log('wrd',wordArr);
-        // let arr = [
-        //   {"hash":1099195778, "definition": "a nocturnal bird of prey with large eyes, a facial disc, a hooked beak, and typically a loud hooting call.", "emoji": "🦉", "example": "I love reaching out into that absolute silence, when you can hear the owl or the wind.", "image_url": "https://media.owlbot.info/dictionary/images/owl.jpg.400x400_q85_box-403,83,960,640_crop_detail.jpg", "type": "noun", "word": "owl"},
-        //   {"hash":1435200378, "definition": "represent (a character) in a theatrical performance or a film.", "emoji": null, "example": "early in her career she played Ophelia", "image_url": null, "type": "verb", "word": "play"},
-        // ]
         if(wordArr === null || undefined){
           //first time this type data ( wordArr) is null for specific key type
           // so create empty array and push the data to the array

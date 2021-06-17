@@ -13,7 +13,7 @@ const stringToHash = (string: string) => {
 }
 
 const getUniqueHash = (favObject: any) =>{
-    console.log(favObject);
+    //console.log(favObject);
     if(!favObject) return;
     
     let first35charecters = favObject.definition.substring(0, 35),
