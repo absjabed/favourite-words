@@ -70,7 +70,24 @@ If you want to run the project please proceed with the following instructions,
     
 ---
 
-### Building the release apk
+### Building the release apk using containerization (Docker)
+If you have docker installed and have internet connect please follow the steps to build release,
+
+  1. Clone the project
+     ```
+     https://github.com/absjabed/favourite-words.git
+     cd favourite-words
+     ```
+  2. Run the following command to build the project,
+     ```
+     docker run -it --rm -v $PWD:/app -w /app reactnativecommunity/react-native-android /bin/bash -c "yarn install && cd /app/android && ./gradlew assembleRelease"
+     ```
+  3. Find your apk file in the following location of your current directory (favourite-words)
+     ```
+     favourite-words/android/app/build/outputs/apk/release/apk-release.apk
+     ```
+
+### Building the release apk (Manually)
 If you want to build the release apk please proceed with the following instructions,
   
   1. Download the project,
