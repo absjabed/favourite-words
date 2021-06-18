@@ -21,7 +21,7 @@ const SearchComponent = ({initiateSearch, onSearchWordChange, searchedWord}: Pro
                 placeholder="Search Dictionary"
                 value={searchedWord}
                 onChangeText={(value: string)=> onSearchWordChange(value)}
-                showSoftInputOnFocus={false}
+                showSoftInputOnFocus={true}
             />
         </View>
         <View style={styles.buttonStyle}>
